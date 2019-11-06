@@ -1,12 +1,12 @@
 {
-  "name": "bootstrap-4-gulp-4-sass-boilerplate",
+  "name": "random-quote-machine",
   "version": "1.0.0",
-  "description": "Gulp 4 Boostrap 4 Sass Workflow",
+  "description": "Random Quote Machine",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ferdinand Tugano",
+  "author": "Denis Bondarchuk",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.26.3",
@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/designdust/bootstrap-4-gulp-4-sass-boilerplate.git"
+    "url": "git+https://github.com/kaizen-design/random-quote-machine.git"
   },
   "keywords": [
     "Sass",
@@ -41,7 +41,7 @@
     "4"
   ],
   "bugs": {
-    "url": "https://github.com/designdust/bootstrap-4-gulp-4-sass-boilerplate/issues"
+    "url": "https://github.com/kaizen-design/random-quote-machine/issues"
   },
-  "homepage": "https://github.com/designdust/bootstrap-4-gulp-4-sass-boilerplate#readme"
+  "homepage": "https://github.com/kaizen-design/random-quote-machine"
 }

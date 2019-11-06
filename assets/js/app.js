@@ -1,13 +1,5 @@
-//JQuery Module Pattern
+"use strict";
 
-// An object literal
-var app = {
-  init: function() {
-    app.functionOne();
-  },
-  functionOne: function () {
-  }
-};
 $("document").ready(function () {
-  app.init();
+
 });

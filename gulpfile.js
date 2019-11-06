@@ -6,7 +6,6 @@ var gulp = require("gulp"),
   uglify = require("gulp-uglify"),
   cleanCSS = require("gulp-clean-css"),
   rename = require("gulp-rename"),
-  merge = require("merge-stream"),
   htmlreplace = require("gulp-html-replace"),
   autoprefixer = require("gulp-autoprefixer"),
   browserSync = require("browser-sync").create();
@@ -14,49 +13,6 @@ var gulp = require("gulp"),
 // Clean task
 gulp.task("clean", function() {
   return del(["dist", "assets/css/app.css"]);
-});
-
-// Copy third party libraries from node_modules into /vendor
-gulp.task("vendor:js", function() {
-  return gulp
-    .src([
-      "./node_modules/bootstrap/dist/js/*",
-      "./node_modules/jquery/dist/*",
-      "!./node_modules/jquery/dist/core.js",
-      "./node_modules/popper.js/dist/umd/popper.*"
-    ])
-    .pipe(gulp.dest("./assets/js/vendor"));
-});
-
-// Copy font-awesome from node_modules into /fonts
-gulp.task("vendor:fonts", function() {
-  return gulp
-    .src([
-      "./node_modules/@fortawesome/fontawesome-free/**/*",
-      "!./node_modules/@fortawesome/fontawesome-free/{less,less/*}",
-      "!./node_modules/@fortawesome/fontawesome-free/{scss,scss/*}",
-      "!./node_modules/@fortawesome/fontawesome-free/.*",
-      "!./node_modules/@fortawesome/fontawesome-free/*.{txt,json,md}"
-    ])
-    .pipe(gulp.dest("./assets/fonts/font-awesome"));
-});
-
-// vendor task
-gulp.task("vendor", gulp.parallel("vendor:fonts", "vendor:js"));
-
-// Copy vendor's js to /dist
-gulp.task("vendor:build", function() {
-  var jsStream = gulp
-    .src([
-      "./assets/js/vendor/bootstrap.bundle.min.js",
-      "./assets/js/vendor/jquery.slim.min.js",
-      "./assets/js/vendor/popper.min.js"
-    ])
-    .pipe(gulp.dest("./dist/assets/js/vendor"));
-  var fontStream = gulp
-    .src(["./assets/fonts/font-awesome/**/*.*"])
-    .pipe(gulp.dest("./dist/assets/fonts/font-awesome"));
-  return merge(jsStream, fontStream);
 });
 
 // Copy Bootstrap SCSS(SASS) from node_modules to /assets/scss/bootstrap
@@ -131,9 +87,7 @@ gulp.task("replaceHtmlBlock", function() {
 // Configure the browserSync task and watch file path for change
 gulp.task("watch", function browserDev(done) {
   browserSync.init({
-    server: {
-      baseDir: "./"
-    }
+    proxy: "http://localhost/random-quote-machine"
   });
   gulp.watch(
     [
@@ -161,8 +115,7 @@ gulp.task("watch", function browserDev(done) {
 gulp.task(
   "build",
   gulp.series(
-    gulp.parallel("css:minify", "js:minify", "vendor"),
-    "vendor:build",
+    gulp.parallel("css:minify", "js:minify"),
     function copyAssets() {
       return gulp
         .src(["*.html", "favicon.ico", "assets/img/**"], { base: "./" })
