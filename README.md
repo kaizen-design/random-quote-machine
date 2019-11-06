@@ -1,7 +1,4 @@
-# Bootstrap 4 Gulp 4 Sass Fontawesome 5 Boilerplate
-
-A not so overkill front-end workflow environment or boilerplate.. whatever you want to call it. bootstrap 4.3.1, For gulp 4, sass and BrowserSync using NPM and Gulp. Automatically compiles and minifies Bootstrap, fontawesome, jquery's node_modules files into the dist folder.
-Fork, star or use it in your project.
+# Random Quote Machine
 
 ## Requirements
 
@@ -12,11 +9,11 @@ Fork, star or use it in your project.
 
 1. Clone repository:
 
-- `git clone https://github.com/designdust/bootstrap-4-gulp-4-sass-boilerplate.git`
+- `git clone https://github.com/kaizen-design/random-quote-machine.git`
 
 2. Change directory:
 
-- `cd bootstrap-4-gulp-4-sass-boilerplate`
+- `cd random-quote-machine`
 
 3. Install all node modules:
 
@@ -32,7 +29,7 @@ Fork, star or use it in your project.
 
 ## Overwriting Bootstrap Variable in Sass
 
-- `bootstrap-4-sass-gulp-4-boilerplate/assets/scss/_bootstrap_variable_overrides.scss`
+- `random-quote-machine/assets/scss/_bootstrap_variable_overrides.scss`
 
 ## Dependencies
 
