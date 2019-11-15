@@ -1,1 +1,16 @@
 // General Style
+.jumbotron {
+  p {
+    font-family: $font-family-serif;
+  }
+}
+.blockquote {
+  cite {
+    font-style: normal;
+  }
+}
+.social-media-list {
+  svg {
+    font-size: 35.43px;
+  }
+}

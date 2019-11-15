@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -11,66 +11,44 @@
     <script src="//kit.fontawesome.com/98dcf3f794.js" crossorigin="anonymous"></script>
   </head>
 
-  <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <body class="h-100 d-flex flex-column justify-content-between">
+    <nav class="navbar justify-content-center navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Random Quote Machine</a>
-      <!--<button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarCollapse"
-        aria-controls="navbarCollapse"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <input
-            class="form-control mr-sm-2"
-            type="text"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
-            <i class="fas fa-search" aria-hidden="true"></i> Search
-          </button>
-        </form>
-      </div>-->
     </nav>
 
-    <main role="main" class="container">
-      <div class="jumbotron text-center">
-        <img src="assets/img/logo.png" />
-        <!--<h1>Bootstrap 4 Starter Template</h1>
-        <p class="lead">This example is a quick bootstrap starter template.</p>
-        <a
-          class="btn btn-lg btn-primary"
-          href="https://getbootstrap.com/docs/4.0/getting-started/introduction/"
-          role="button"
-          target="_blank"
-          >View Bootstrap 4 Docs &raquo;</a
-        >-->
+    <main role="main" class="container my-auto">
+      <div id="quote-box" class="jumbotron p-4 mb-0">
+        <blockquote class="blockquote text-center my-4">
+          <p id="text" class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <footer class="blockquote-footer">
+            <cite id="author" title="Source Title">Source Title</cite>
+          </footer>
+        </blockquote>
+        <div class="d-flex justify-content-between align-items-center">
+          <ul class="social-media-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a id="tweet-quote" href="#">
+                <i class="fab fa-twitter-square"></i>
+              </a>
+            </li>
+          </ul>
+          <button id="new-quote" type="button" class="btn btn-primary" role="button">
+            Next Quote
+          </button>
+        </div>
       </div>
     </main>
+
+    <footer class="text-center py-3">
+      <div class="container">
+        <small>Designed & built by <a href="#" target="_blank">Denis B.</a></small>
+      </div>
+    </footer>
 
     <script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="//cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
 </html>
