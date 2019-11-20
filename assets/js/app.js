@@ -32,6 +32,6 @@ function getRandomQuote(data) {
 function getQuote() {
   var QUOTE = getRandomQuote(QUOTES);
   $('#text').text(QUOTE.quote);
-  $('#author').html(QUOTE.author);
-  $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?text=' + QUOTE.quote)
+  $('#author').html(QUOTE.author).prop('title', QUOTE.author);
+  $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?text=' + QUOTE.quote);
 }
